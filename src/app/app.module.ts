@@ -1,33 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
+import { GettingStartedComponent } from './getting-started/getting-started.component';
+import { InstallationComponent } from './installation/installation.component';
+import { CreateProjectComponent } from './create-project/create-project.component';
+import { StructureComponent } from './structure/structure.component';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { DisplayPage } from '../pages/display/display';
+const routes: Routes = [
+  { path: 'GettingStarted', component: GettingStartedComponent },
+  {path: 'Installation' , component: InstallationComponent},
+  {path:'CreateProject' ,component:CreateProjectComponent},
+  {path:'Structure', component:StructureComponent}
+
+];
+
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    DisplayPage
+    AppComponent,
+    GettingStartedComponent,
+    InstallationComponent,
+    CreateProjectComponent,
+    StructureComponent
   ],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
+    RouterModule.forRoot(routes),
+    BrowserModule
   ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    DisplayPage
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

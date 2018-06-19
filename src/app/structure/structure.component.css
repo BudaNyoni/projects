@@ -1,0 +1,35 @@
+body{
+    background-image: url('../../assets/opengraph_curso_ionic.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200vh;
+
+}
+h1{
+    text-align: center;
+    background-color: lightskyblue;
+    padding: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border: 3px solid rgba(0,0,0,0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0.90;
+}
+img{
+    margin: 60px;
+    width: 600px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 2px solid wheat;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: antiquewhite;
+    opacity: 0.90;
+
+
+}
