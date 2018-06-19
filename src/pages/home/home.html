@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+
+
+    <ion-title>
+      Employee Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+ 
+ <ion-list  >
+    <ion-item>
+      <ion-label fixed>Name:</ion-label>
+      <ion-input type="text" #Name></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label fixed>Surname:</ion-label>
+      <ion-input type="text" #Surname></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>ID:</ion-label>
+        <ion-input type="ID" #ID></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label fixed>Role:</ion-label>
+          <ion-input type="text" #Role></ion-input>
+        </ion-item>
+  
+  </ion-list>
+
+ 
+
+
+  <button ion-button color="dark" (click)= "List(Name.value,Surname.value,ID.value,Role.value)"  >ADD Employee</button>
+</ion-content>
